@@ -13,7 +13,20 @@ spec:
         app: calculator
     spec:
       containers:
-      - name: calculator
-        image: biniltomjose12780/calculator-microservice:latest
-        ports:
-        - containerPort: 3000
+        - name: calculator
+          image: biniltomjose12780/calculator-microservice:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: MONGO_USER
+              valueFrom:
+                secretKeyRef:
+                  name: mongodb-secret
+                  key: mongo-user
+            - name: MONGO_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: mongodb-secret
+                  key: mongo-password
+            - name: MONGO_HOST
+              value: mongodb-service
