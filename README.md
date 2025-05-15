@@ -6,7 +6,7 @@ This project demonstrates the deployment of a Node.js-based calculator microserv
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠 Technologies Used
 
 - **Node.js**, **Express.js**, **Mongoose**
 - **Docker**, **Docker Hub**
